@@ -1,0 +1,25 @@
+{
+  "name": "discussion_board",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Geno Guerrero"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/gnoevil/discussion_board",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.2"
+  }
+}
