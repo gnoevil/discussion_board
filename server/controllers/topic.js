@@ -1,3 +1,4 @@
+console.log("in the topic server side");
 var mongoose = require('mongoose');
 var Topic = mongoose.model('Topics');
 
@@ -29,7 +30,7 @@ module.exports = (function() {
 			})
 		},
 
-		getOne: function(req, res) {
+		findOne: function(req, res) {
 			Topic.findOne({_id: req.params.id}, function(err, data) {
 				if(err)
 					console.log("topic 34", err)

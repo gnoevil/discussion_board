@@ -1,3 +1,4 @@
+console.log("in the models server side");
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -8,8 +9,6 @@ var userSchema = mongoose.Schema({
 	posts       :[{ type: mongoose.Schema.Types.Mixed, ref: "Posts" }],
 	comments    :[{ type: mongoose.Schema.Types.Mixed, ref: "Comments"}]
 })
-
-
 var topicSchema = mongoose.Schema({
 	name        :String,
 	user_id     :{ type: mongoose.Schema.Types.ObjectId, ref: "Users" },
@@ -18,8 +17,7 @@ var topicSchema = mongoose.Schema({
 	description :String,
 	created_at  :{ type: Date, default: Date.now },
 	posts       :Number
-}) 
-
+})
 var postsSchema = mongoose.Schema({
 	name        :String,
 	user_id     :{ type: mongoose.Schema.Types.ObjectId, ref: "Users"},
@@ -30,7 +28,6 @@ var postsSchema = mongoose.Schema({
 	dislike     :Number,
 	created_at  :{ type: Date, default: Date.now }
 })
-
 var commentsSchema = mongoose.Schema({
 	name        :String,
 	user_id     :{ type: mongoose.Schema.Types.ObjectId, ref: "Users"},
@@ -39,8 +36,8 @@ var commentsSchema = mongoose.Schema({
 	comment     :String,
 	created_at  :{ type: Date, default: Date.now}
 })
-
 mongoose.model("Users", userSchema);
 mongoose.model("Topics", topicSchema);
 mongoose.model("Posts", postsSchema);
 mongoose.model("Comments", commentsSchema);
+console.log("models server side loaded");

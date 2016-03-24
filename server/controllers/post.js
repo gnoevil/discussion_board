@@ -1,3 +1,4 @@
+console.log("in the post controller server side");
 var mongoose = require('mongoose');
 var Post = mongoose.model('Posts');
 

@@ -1,21 +1,21 @@
+console.log('In the Client Config')
 var app = angular.module("app", ['ngRoute']);
-
 app.config(function($routeProvider) {
 	$routeProvider
 	.when('/', {
-		templateUrl: '/main.ejs',
+		templateUrl: '/partials/main.ejs',
 		controller: 'userController'
 	})
 	.when('/dashboard', {
-		templateUrl: '/dashboard.ejs',
+		templateUrl: '/partials/dashboard.ejs',
 		controller: 'dashboardController'
 	})
 	.when('/topic/:id', {
-		templateUrl: '/topic.ejs',
+		templateUrl: '/partials/topic.ejs',
 		controller: 'topicController'
 	})
 	.when('/user/:id', {
-		templateUrl: '/user.ejs',
+		templateUrl: '/partials/user.ejs',
 		controller: 'userController'
 	})
 	.otherwise({

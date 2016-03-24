@@ -1,3 +1,4 @@
+console.log("in the user controller server side");
 var mongoose = require('mongoose');
 var User = mongoose.model('Users');
 
@@ -22,8 +23,8 @@ module.exports = (function() {
 			})
 		},
 
-		readOne: function(req, res) {
-			User.find({ _id: req.params.id }, function(err, data) {
+		findOne: function(req, res) {
+			User.findOne({ _id: req.params.id }, function(err, data) {
 				if(err)
 					console.log("user 28", err);
 				else

@@ -1,3 +1,4 @@
+console.log("in the comment controller server side");
 var mongoose = require('mongoose');
 var Comment = mongoose.model('Comments');
 
@@ -16,7 +17,7 @@ module.exports = (function() {
 							res.json(data);
 					})
 			})
-		},
+		}
 
 		// read: function(req, res) {
 		// 	Comment.find({post_id: req.params.id}, function(err, data) {
@@ -28,3 +29,4 @@ module.exports = (function() {
 		// },
 	}
 })();
+console.log("comment controller server side loaded");
